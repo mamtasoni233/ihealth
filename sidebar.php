@@ -50,6 +50,16 @@
                 </li>
                 <li><a class="m-link" href="department.php"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
                 <li class="collapsed">
+                    <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Staff" href="#">
+                        <i class="icofont-doctor-alt fs-5"></i>  <span>Staff</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
+                        <!-- Menu: Sub menu ul -->
+                        <ul class="sub-menu collapse" id="menu-Staff">
+                            <li><a class="ms-link" href="staff-all.php">All Staff</a></li>
+                            <li><a class="ms-link" href="staff-add.php">Add Staff</a></li>
+                            <li><a class="ms-link" href="doctor-profile.php">Staff Profile</a></li>
+                        </ul>
+                </li>
+                <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Componentsone" href="#"><i
                             class="icofont-ui-calculator"></i> <span>Accounts</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                     <!-- Menu: Sub menu ul -->
