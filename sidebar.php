@@ -48,26 +48,18 @@
                         <li><a class="ms-link" href="patient-invoices.php">Patient Invoices</a></li>
                     </ul>
                 </li>
-                <li><a class="m-link" href="department.html"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
+                <li><a class="m-link" href="department.php"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
                 <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Componentsone" href="#"><i
                             class="icofont-ui-calculator"></i> <span>Accounts</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                     <!-- Menu: Sub menu ul -->
                     <ul class="sub-menu collapse" id="menu-Componentsone">
-                        <li><a class="ms-link" href="invoices.html"><span>Invoices</span> </a></li>
-                        <li><a class="ms-link" href="payments.html"><span>Payments</span> </a></li>
-                        <li><a class="ms-link" href="expenses.html"><span>Expenses</span> </a></li>
+                        <li><a class="ms-link" href="invoices.php"><span>Invoices</span> </a></li>
+                        <li><a class="ms-link" href="payments.php"><span>Payments</span> </a></li>
+                        <li><a class="ms-link" href="expenses.php"><span>Expenses</span> </a></li>
                     </ul>
                 </li>
-                <li class="collapsed">
-                    <a class="m-link" data-bs-toggle="collapse" data-bs-target="#app" href="#">
-                    <i class="icofont-code-alt fs-5"></i> <span>App</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
-                    <!-- Menu: Sub menu ul -->
-                    <ul class="sub-menu collapse" id="app">
-                        <li><a class="ms-link" href="calendar.html">Calandar</a></li>
-                        <li><a class="ms-link" href="chat.html"> Communication</a></li>
-                    </ul>
-                </li>
+            
                 <li><a class="m-link" href="ui-elements/ui-alerts.html"><i class="icofont-paint fs-5"></i> <span>UI Components</span></a></li>
                
                 <li class="collapsed">
@@ -75,10 +67,7 @@
                     <i class="icofont-page fs-5"></i> <span>Pages Example</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                     <!-- Menu: Sub menu ul -->
                     <ul class="sub-menu collapse" id="page">
-                        <li><a class="ms-link" href="table.html">Table Example</a></li>
-                        <li><a class="ms-link" href="forms.html"> Forms Example</a></li>
-        <li><a class="ms-link" href="icon.html"> Icons Example</a></li>
-                        <li><a class="ms-link" href="contact.html"> Contact Example</a></li>
+                        <li><a class="ms-link" href="contact.php"> Contact Example</a></li>
                     </ul>
                 </li>
                 
