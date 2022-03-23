@@ -31,10 +31,10 @@
                         <!-- Menu: Sub menu ul -->
                         <ul class="sub-menu collapse" id="menu-Doctor">
                             <li><a class="ms-link" href="doctor-all.php">All Doctors</a></li>
-                            <li><a class="ms-link" href="doctor-add.html">Add Doctor</a></li>
-                            <li><a class="ms-link" href="appointment.html">Appointment</a></li>
-                            <li><a class="ms-link" href="doctor-profile.html">Doctors Profile</a></li>
-                            <li><a class="ms-link" href="doctor-schedule.html">Doctor Schedule</a></li>
+                            <li><a class="ms-link" href="doctor-add.php">Add Doctor</a></li>
+                            <li><a class="ms-link" href="appointment.php">Appointment</a></li>
+                            <li><a class="ms-link" href="doctor-profile.php">Doctors Profile</a></li>
+                            <li><a class="ms-link" href="doctor-schedule.php">Doctor Schedule</a></li>
                         </ul>
                 </li>
                 <li class="collapsed">
@@ -42,10 +42,10 @@
                     <i class="icofont-blind fs-5"></i> <span>Patient</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                     <!-- Menu: Sub menu ul -->
                     <ul class="sub-menu collapse" id="menu-Patient">
-                        <li><a class="ms-link" href="patient-list.html">Patient List</a></li>
-                        <li><a class="ms-link" href="patient-add.html">Add Patient</a></li>
-                        <li><a class="ms-link" href="patient-profile.html">Patient Profile</a></li>
-                        <li><a class="ms-link" href="patient-invoices.html">Patient Invoices</a></li>
+                        <li><a class="ms-link" href="patient-list.php">Patient List</a></li>
+                        <li><a class="ms-link" href="patient-add.php">Add Patient</a></li>
+                        <li><a class="ms-link" href="patient-profile.php">Patient Profile</a></li>
+                        <li><a class="ms-link" href="patient-invoices.php">Patient Invoices</a></li>
                     </ul>
                 </li>
                 <li><a class="m-link" href="department.html"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
