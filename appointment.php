@@ -35,6 +35,10 @@
                             <div class="card-body">
                                 <form>
                                     <div class="row g-3 align-items-center">
+                                    <div class="col-md-6">
+                                            <label for="regi_num" class="form-label">Registration Number</label>
+                                            <input type="text" class="form-control" id="regi_num">
+                                        </div>
                                         <div class="col-md-6">
                                             <label for="firstname" class="form-label">Full Name</label>
                                             <input type="text" class="form-control" id="firstname">
@@ -88,6 +92,17 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
+                                            <label  class="form-label">Select Department</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select Department</option>
+                                                <option value="1">DR.Peter</option>
+                                                <option value="2">DR.Mary</option>
+                                                <option value="3">DR.Zoe</option>
+                                                <option value="4">DR.Lily</option>
+                                                <option value="5">DR.Adrian</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
                                             <label  class="form-label">Select Doctor</label>
                                             <select class="form-select" aria-label="Default select example">
                                                 <option selected>Select Doctor</option>
@@ -104,8 +119,9 @@
                                             <textarea  class="form-control" id="addnote" rows="3"></textarea> 
                                         </div>
                                     </div>
-                                    
-                                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#depform">Submit</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -253,6 +269,30 @@
                 </div>
             </div>
         </div> 
+        <!-- Add Department-->
+        <div class="modal fade" id="depform" tabindex="-1"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title  fw-bold" id="depaddLabel"> Department Add</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <form action="">
+                                <label for="exampleFormControlInput1111" class="form-label">Department Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1111">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
 
     </div>
   

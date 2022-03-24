@@ -51,17 +51,10 @@ include_once('sidebar.php');
                                             <input type="email" class="form-control" id="emailaddress">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="admitdate" class="form-label">Admit Date</label>
-                                            <input type="date" class="form-control" id="admitdate">
+                                            <label for="age" class="form-label">Age</label>
+                                            <input type="text" class="form-control" id="age">
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="admittime" class="form-label">Admit Time</label>
-                                            <input type="time" class="form-control" id="admittime">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="formFileMultiple" class="form-label">Files Document Upload</label>
-                                            <input class="form-control" type="file" id="formFileMultiple" multiple>
-                                        </div>
+                                       
                                         <div class="col-md-6">
                                             <label  class="form-label">Gender</label>
                                             <div class="row">
@@ -83,35 +76,9 @@ include_once('sidebar.php');
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <label for="addnote" class="form-label">Add Note</label>
-                                            <textarea  class="form-control" id="addnote" rows="3"></textarea> 
-                                        </div>
-                                    </div>
-                                    
-                                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
-                                <h6 class="mb-0 fw-bold ">Registration Information</h6>
-                            </div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="row g-3 align-items-center">
-                                        <div class="col-md-6">
-                                            <label  class="form-label">Select Payment Option</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Payment Option</option>
-                                                <option value="1">Credit Card</option>
-                                                <option value="2">Debit Card</option>
-                                                <option value="3">Case Money</option>
-                                            </select>
-                                        </div>
                                         <div class="col-md-6">
                                             <label  class="form-label">Insurance Information</label>
-                                            <div class="row">
+                                            <div class="row pt-2">
                                                 <div class="col-md-6">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
@@ -132,31 +99,20 @@ include_once('sidebar.php');
                                         </div>
                                         <div class="col-md-6">
                                             <label for="insinfo" class="form-label">Insurance Number</label>
-                                            <input type="text" class="form-control" id="insinfo">
+                                            <input type="text" class="form-control mt-2" id="insinfo">
                                         </div>
-                                        <div class="col-md-6">
-                                            <label for="roominfo" class="form-label">Ward Number</label>
-                                            <input type="text" class="form-control" id="roominfo">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label  class="form-label">Select Doctor</label>
-                                            <select class="form-select" aria-label="Default select example">
-                                                <option selected>Select Doctor</option>
-                                                <option value="1">Vanessa Miller</option>
-                                                <option value="2">Rebecca Hunter</option>
-                                                <option value="3">Matt Clark</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="advancepayment" class="form-label">Advance Amount</label>
-                                            <input type="text" class="form-control" id="advancepayment">
+                                        <div class="col-md-12">
+                                            <label for="addnote" class="form-label">Add Note</label>
+                                            <textarea  class="form-control" id="addnote" rows="3"></textarea> 
                                         </div>
                                     </div>
-                                    
-                                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                                    </div>
                                 </form>
-                            </div>  
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

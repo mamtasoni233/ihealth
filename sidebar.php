@@ -24,15 +24,15 @@
                     <ul class="sub-menu collapse show" id="dashboard">
                         <li><a class="ms-link active" href="index.php">Hospital Dashboard</a></li>
                     </ul>
-                </li>               
+                </li> 
+                <li><a class="m-link" href="department.php"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
                 <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Doctor" href="#">
                         <i class="icofont-doctor-alt fs-5"></i>  <span>Doctor</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                         <!-- Menu: Sub menu ul -->
                         <ul class="sub-menu collapse" id="menu-Doctor">
                             <li><a class="ms-link" href="doctor-all.php">All Doctors</a></li>
-                            <li><a class="ms-link" href="doctor-add.php">Add Doctor</a></li>
-                            <li><a class="ms-link" href="appointment.php">Appointment</a></li>
+                            <li><a class="ms-link" href="doctor-detail.php">Doctor Details</a></li>
                         </ul>
                 </li>
                 <li class="collapsed">
@@ -42,16 +42,16 @@
                     <ul class="sub-menu collapse" id="menu-Patient">
                         <li><a class="ms-link" href="patient-list.php">Patient List</a></li>
                         <li><a class="ms-link" href="patient-add.php">Add Patient</a></li>
+                        <li><a class="ms-link" href="appointment.php">Appointment</a></li>
                     </ul>
                 </li>
-                <li><a class="m-link" href="department.php"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
                 <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Staff" href="#">
-                        <i class="icofont-doctor-alt fs-5"></i>  <span>Staff</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
+                        <i class="icofont-waiter-alt fs-5"></i>  <span>Staff</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
                         <!-- Menu: Sub menu ul -->
                         <ul class="sub-menu collapse" id="menu-Staff">
                             <li><a class="ms-link" href="staff-all.php">All Staff</a></li>
-                            <li><a class="ms-link" href="staff-add.php">Add Staff</a></li>
+                            <li><a class="ms-link" href="staff-detail.php">Staff Details</a></li>
                         </ul>
                 </li>
                 <li class="collapsed">
@@ -65,7 +65,7 @@
                     </ul>
                 </li>
             
-                <li><a class="m-link" href="ui-elements/ui-alerts.html"><i class="icofont-paint fs-5"></i> <span>UI Components</span></a></li>
+                <!-- <li><a class="m-link" href="ui-elements/ui-alerts.html"><i class="icofont-paint fs-5"></i> <span>UI Components</span></a></li> -->
                
                 <li class="collapsed">
                     <a class="m-link" data-bs-toggle="collapse" data-bs-target="#page" href="#">
