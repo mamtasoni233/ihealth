@@ -1,6 +1,8 @@
 <?php
     require_once('db/connection.php');
 
+   
+
 ?>
     <?php
         include_once('head.php');
@@ -33,7 +35,7 @@
                                 <h6 class="mb-0 fw-bold ">Basic Inforamtion</h6>
                             </div>
                             <div class="card-body">
-                                <form>
+                                <form method="POST">  
                                     <div class="row g-3 align-items-center">
                                     <div class="col-md-6">
                                             <label for="regi_num" class="form-label">Registration Number</label>
@@ -120,7 +122,7 @@
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#depform">Submit</button>
+                                        <button type="submit" class="btn btn-primary mt-4" name="submit" >Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -299,11 +301,24 @@
 </div>
 
 <!-- Jquery Core Js -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- Jquery Core Js -->
 <script src="assets/bundles/libscripts.bundle.js"></script>
 
 
+
 <!-- Jquery Page Js -->
-<script src="../js/template.js"></script>
+<script src="assets/js/template.js"></script>
+<script>
+    <?php 
+        if(isset($_POST['submit']))  {?>
+            $(function(){
+                $("#depform").modal("show");
+            })
+    <?php 
+        }
+    ?>
+</script> 
 
  
 </body>
