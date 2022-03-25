@@ -1,11 +1,101 @@
 <?php
     require_once('db/connection.php');
 
-    include_once('head.php');
+    $regi_num  = "";
+    $full_name = "";
+    $phone = "";
+    $email = "";
+    $age = "";
+    $gender = "";
+    $insure = "";
+    $insinfo = "";
+    $note = "";
+    $created = "";
+    $updated = "";
 
-    include_once('sidebar.php');
+
+    if(isset($_GET['id'])){
+        $sel = "select * from patient where id = '".$_GET['id']."'";
+        $exe = mysqli_query($con, $sel);
+        $result = mysqli_fetch_array($exe);
+
+        $regi_num  = $result['reg_id'];
+        $full_name = $result['full_name'];
+        $phone = $result['phone'];
+        $email = $result['email'];
+        $age = $result['age'];
+        $gender = $result['gender'];
+        $insure = $result['insure'];
+        $insinfo = $result['insinfo'];
+        $note = $result['note'];
+        $created=date('Y-m-d H:i:s');
+		$updated=date('Y-m-d H:i:s');
+    }
+        
+    if(isset($_POST['submit'])){
+
+        $regi_num  = $_POST['regi_num'];
+        $full_name = $_POST['full_name'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $age = $_POST['age'];
+        $gender = $_POST['gender'];
+        $insure = $_POST['insure'];
+        $insinfo = $_POST['insinfo'];
+        $note = $_POST['note'];
+        $created=date('Y-m-d H:i:s');
+        $updated=date('Y-m-d H:i:s');
+    
+        $query = "INSERT INTO `patient`(`reg_id`, `full_name`, `phone`, `email`, `age`, `gender`, `note`, `insure`, `insinfo`, `created_date`, `updtaed_date`, `status`)
+                    VALUES('".$regi_num."','".$full_name."','".$phone."','".$email."','".$age."','".$gender."','".$insure."','".$insinfo."','".$note."','".$created."','".$updated."')";
+       
+        
+        $result = mysqli_query($con, $query);
+
+        if($result == 1){
+            echo '<script>alert("Data Sucessfully inserted.....")</script>';
+        } else 
+        {
+            echo '<script>alert("Data could be wrong entry.....")</script>';
+        }
+        
+    }
+        // else{
+        //     $update = "update patient set
+        //                     reg_id = '".$regi_num."',
+        //                     full_name = '".$regi_num."',
+        //                     phone = '".$phone."',
+        //                     email = '".$email."',
+        //                     age = '".$age."',
+        //                     gender = '".$gender."',
+        //                     insure = '".$insure."',
+        //                     insinfo = '".$insinfo."',
+        //                     note = '".$note."',
+        //                     full_name = '".$regi_num."',
+        //                     created_date ='".$created."',
+        //                     updated_date ='".$updated."', where id = '".$_GET['id']."'";
+            
+        //     $updateResult = mysqli_query($con, $update);
+        //     if ($updateResult == 1) {
+        //         echo '<script>alert("Data Sucessfully Updated.....")</script>';
+        //     } else {
+        //         echo '<script>alert("Something Went Wrong.....")</script>';
+        //     }
+        //     header("Refresh:1");
+        // }
+  
+
 
 ?>
+<?php
+    include_once('head.php');
+?>
+
+<?php
+
+    include_once('sidebar.php');
+?>
+
 
     <!-- main body area -->
     <div class="main px-lg-4 px-md-4">
@@ -35,30 +125,30 @@
                                     <div class="row g-3 align-items-center">
                                     <div class="col-md-6">
                                             <label for="regi_num" class="form-label">Registration Number</label>
-                                            <input type="text" class="form-control" id="regi_num">
+                                            <input type="text" value="<?php echo $regi_num;?>" class="form-control" id="regi_num" name="regi_num">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="full_name" class="form-label">Full Name</label>
-                                            <input type="text" class="form-control" id="fullname" name="full_name">
+                                            <input type="text" value="<?php echo $full_name;?>" class="form-control" id="fullname" name="full_name">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="phone" class="form-label">Phone Number</label>
-                                            <input type="text" class="form-control" id="phone" name="phone">
+                                            <input type="text" value="<?php echo $phone;?>" class="form-control" id="phone" name="phone">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="email" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control" id="email" name="email">
+                                            <input type="email" value="<?php echo $email;?>" class="form-control" id="email" name="email">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="age" class="form-label">Age</label>
-                                            <input type="text" class="form-control" id="age" name="age">
+                                            <input type="text" value="<?php echo $age;?>" class="form-control" id="age" name="age">
                                         </div>
                                         <div class="col-md-6">
                                             <label  class="form-label">Gender</label>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios11" value="male" checked>
+                                                        <input class="form-check-input" type="radio" <?php echo $gender === 'male' ? "checked" : ''; ?> name="gender" id="male" value="male">
                                                         <label class="form-check-label" for="male">
                                                         Male
                                                         </label>
@@ -66,7 +156,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                                        <input class="form-check-input" type="radio" <?php echo $gender === 'female' ? "checked" : ''; ?> name="gender" id="female" value="female">
                                                         <label class="form-check-label" for="female">
                                                         Female
                                                         </label>
@@ -74,7 +164,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                                                        <input class="form-check-input" type="radio" name="gender" id="other" value="other" <?php echo $gender === 'other' ? "checked" : ''; ?>>
                                                         <label class="form-check-label" for="other">
                                                         Other
                                                         </label>
@@ -87,7 +177,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="insure" id="insure" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="insure" id="insure" value="Yes I have Insurance" <?php echo $insure === true ? false : ''; ?>>
                                                         <label class="form-check-label" for="insure">
                                                           Yes I have Insurance
                                                         </label>
@@ -95,7 +185,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="insure_num" id="insure" value="option2">
+                                                        <input class="form-check-input" type="radio" name="insure" id="insure" value=" No I haven't Insurance" <?php echo $insure === true ? false : ''; ?>>
                                                         <label class="form-check-label" for="insure">
                                                             No I haven't Insurance
                                                         </label>
@@ -105,12 +195,12 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="insinfo" class="form-label">Insurance Number</label>
-                                            <input type="text" class="form-control" id="insinfo" name="insinfo">
+                                            <input type="text" class="form-control" id="insinfo" name="insinfo" value="<?php echo $insinfo; ?>">
                                         </div>
                                         
                                         <div class="col-md-12">
                                             <label for="addnote" class="form-label">Add Note</label>
-                                            <textarea  class="form-control" id="addnote" rows="3"></textarea> 
+                                            <textarea  class="form-control" id="addnote" rows="3" name="note"><?php echo $note ?></textarea> 
                                         </div>
                                     </div>
                                     <div class="text-center">
