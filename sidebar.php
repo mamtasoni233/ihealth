@@ -4,7 +4,6 @@
 <?php
     include_once('head.php');
 ?>
-    
     <!-- sidebar -->
     <div class="sidebar px-4 py-4 py-md-5 me-0">
         <div class="d-flex flex-column h-100">

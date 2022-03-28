@@ -1,5 +1,16 @@
 <?php
-require_once('db/connection.php');
+    require_once('db/connection.php');
+   
+    if (isset($_POST['del_id'])) {
+
+        $del = "DELETE FROM patient WHERE p_id ='". $_POST['del_id'] . "'";
+        if (mysqli_query($con, $del)) {
+            echo '<script>alert("Data Sucessfully Deleted........");</script>';
+        } else {
+            echo '<script>alert("Something Went Wront Data Not Deleted........");</script>';
+        }
+        header('Refresh:1');
+    }
 
 ?>
 <?php
@@ -33,34 +44,55 @@ include_once('sidebar.php');
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Patients</th>
+                                    <th>Regster Id</th>
+                                    <th>Patients Name</th>
                                     <th>Age</th>
-                                    <th>Adress</th>
-                                    <th>Admited</th>
-                                    <th>Discharge</th>
-                                    <th>Status</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Gender</th>
+                                    <th>Insurence</th>
+                                    <th>Insurence Number</th>
+                                    <th>Note/Message</th>
                                     <th>Actions</th> 
 
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>PT-0001</td>
-                                    <td><img src="assets/images/xs/avatar3.jpg" class="avatar  rounded-circle me-2" alt="profile-image"><span>Molly </span></td>
-                                    <td>45</td>
-                                    <td>70 Bowman St. South Windsor, CT 06074</td>
-                                    <td>May 13, 2021</td>
-                                    <td>May 16, 2021</td>
-                                    <td><span class="badge bg-info">Admit</span></td>
-                                    <td>
-                                        <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                            <button type="button" class="btn btn-outline-secondary"><i class="icofont-fountain-pen text-success"></i><i class="icofont-paper icofont-fountain-pen text-success"></i></button>
-                                            <!-- <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#depedit"><i class="icofont-edit text-success"></i></button>
-                                            <button type="button" class="btn btn-outline-secondary deleterow"><i class="icofont-ui-delete text-danger"></i></button> -->
-                                        </div>
-                                    </td>
-                                </tr>
-                                
+                                <?php
+                                    $query = "SELECT * FROM patient";
+                                    $exe = mysqli_query($con, $query);
+                                    $index = 1;
+                                    while($result = mysqli_fetch_array($exe)){
+                                ?>
+                                    <tr>
+                                        <td><?php echo $index++; ?></td>
+                                        <td><?php echo $result['reg_id']; ?></td>
+                                        <td><?php echo $result['full_name']; ?></td>
+                                        <td><?php echo $result['age']; ?></td>
+                                        <td><?php echo $result['phone']; ?></td>
+                                        <td><?php echo $result['email']; ?></td>
+                                        <td><?php echo $result['gender']; ?></td>
+                                        <td><?php echo $result['insure']; ?></td>
+                                        <td><?php echo $result['insinfo']; ?></td>
+                                        <td><?php echo $result['note']; ?></td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                <button type="button" class="btn btn-outline-secondary"><i class="icofont-fountain-pen text-success"></i>
+                                                    <i class="icofont-paper icofont-fountain-pen text-success"></i>
+                                                </button>
+                                                <a href="patient-add.php?edit&p_id=<?php echo $result['p_id'] ?>" class="btn btn-outline-secondary">
+                                                    <i class="icofont-edit text-success"></i></a>
+                                                <form method="post">
+                                                    <input type="hidden" value="<?php echo $result['p_id'] ?>" name="del_id" >
+                                                    <button type="submit" class="btn btn-outline-secondary deleterow" name ="delete">
+                                                        <i class="icofont-ui-delete text-danger"></i>Delete</button> 
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php
+                                    }
+                                ?>
                             </tbody>
                         </table>
                     </div>

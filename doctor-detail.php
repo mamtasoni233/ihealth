@@ -1,5 +1,23 @@
 <?php
-require_once('db/connection.php');
+    require_once('db/connection.php');
+
+    $regi_id = "";
+    $hod = "";
+    $dept_id ="";
+    $f_name = "";
+    $l_name = "";
+    $phone = "";
+    $email = "";
+    $join_date = "";
+    $gender = "";
+    $note = "";
+    $payment_mode = "";
+    $cabin_num = "";
+    $speciality = "";
+    $vc_attend = "";
+    $social_media = "";
+    $created = "";
+    $updated = "";
 
 ?>
 <?php
@@ -174,7 +192,7 @@ include_once('sidebar.php');
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="depaddLabel"> Staff Add</h5>
+                    <h5 class="modal-title fw-bold" id="depaddLabel">Doctor Add</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
