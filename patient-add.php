@@ -87,9 +87,6 @@
             header("Refresh:1");
         }
     }
-    
-  
-
 
 ?>
 <?php
@@ -128,7 +125,7 @@
                             <div class="card-body">
                                 <form method="POST">  
                                     <div class="row g-3 align-items-center">
-                                    <div class="col-md-6">
+                                        <div class="col-md-6">
                                             <label for="regi_num" class="form-label">Registration Number</label>
                                             <input type="text" value="<?php echo $regi_num;?>" class="form-control" id="regi_num" name="regi_num" required>
                                         </div>
