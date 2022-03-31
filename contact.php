@@ -762,17 +762,17 @@ include_once('sidebar.php');
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="abc1" class="form-label">Birthdate</label>
-                                    <input type="date" class="form-control" id="abc1" value="2021-03-12">
+                                    <input type="date" class="form-control" id="abc1" value="">
                                 </div>
                             </div>
                             <div class="row g-3 mb-3">
                                 <div class="col-sm-6">
                                     <label for="deptwo1" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="deptwo1" value="PhilGlover@gmail.com">
+                                    <input type="email" class="form-control" id="deptwo1" value="">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control" value="775-555-0117">
+                                    <input type="text" class="form-control" value="">
                                 </div>
                             </div>
                         </form>
